@@ -1,0 +1,6 @@
+C:\Proyectos\Empadronamiento\DalPadron\bin\Debug\DalPadron.dll.config
+C:\Proyectos\Empadronamiento\DalPadron\bin\Debug\DalPadron.dll
+C:\Proyectos\Empadronamiento\DalPadron\bin\Debug\DalPadron.pdb
+C:\Proyectos\Empadronamiento\DalPadron\bin\Debug\SubSonic.dll
+C:\Proyectos\Empadronamiento\DalPadron\obj\Debug\DalPadron.dll
+C:\Proyectos\Empadronamiento\DalPadron\obj\Debug\DalPadron.pdb

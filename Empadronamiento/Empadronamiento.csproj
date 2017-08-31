@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D4E1658-3927-44BC-B244-A79DD7DCC8B0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Empadronamiento</RootNamespace>
+    <AssemblyName>Empadronamiento</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CrystalDecisions.VSDesigner.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtensionMethods, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ExtensionMethods.dll</HintPath>
+    </Reference>
+    <Reference Include="MagicAjax, Version=0.3.0.0, Culture=neutral, PublicKeyToken=bf4053b35db106f3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MagicAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Salud.Security.SSO">
+      <HintPath>..\packages\SSO\Salud.Security.SSO.dll</HintPath>
+    </Reference>
+    <Reference Include="Salud.Security.SSO.Core">
+      <HintPath>..\packages\SSO\Salud.Security.SSO.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SubSonic, Version=2.2.0.0, Culture=neutral, PublicKeyToken=eadb47849839a332, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SubSonic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\Empadronamiento.dll.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="css\fonts\fontawesome-webfont.eot" />
+    <Content Include="css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="css\fonts\fontawesome-webfont.woff" />
+    <Content Include="css\fonts\fontawesome-webfont.woff2" />
+    <Content Include="css\fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Empadronamiento.csprojResolveAssemblyReference.cache" />
+    <Content Include="mPaciente.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Antecedente\AntecedentesFamiliares.aspx" />
+    <Content Include="bin\Empadronamiento.dll" />
+    <Content Include="bin\Empadronamiento.pdb" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.Web.xml" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="ConsultaAmbulatoria\UserControls\DiagnosticoPrincipal.ascx" />
+    <Content Include="css\bootstrap-datepicker.min.css" />
+    <Content Include="css\bootstrap-datepicker3.min.css" />
+    <Content Include="css\bootstrap-datetimepicker.min.css" />
+    <Content Include="css\bootstrap-table.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\fonts\font-awesome.min.css" />
+    <Content Include="css\fonts\fontawesome-webfont.svg" />
+    <Content Include="css\formValidation.css" />
+    <Content Include="css\intlTelInput.css" />
+    <Content Include="css\jquery-clockpicker.min.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\select2.min.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="HelpUnificacion.htm" />
+    <Content Include="HistoriaClinica\ConsultasHClinicas.aspx" />
+    <Content Include="HistoriaClinica\NroHistoriaClinicaEdit.aspx" />
+    <Content Include="HistoriaClinica\NroHistoriaClinicaView.aspx" />
+    <Content Include="HistoriaClinica\NroHistoriaClinicaxEfector.aspx" />
+    <Content Include="img\flags%402x.png" />
+    <Content Include="img\flags.png" />
+    <Content Include="js\bootstrap-datepicker.es.min.js" />
+    <Content Include="js\bootstrap-datepicker.min.js" />
+    <Content Include="js\bootstrap-datetimepicker.min.js" />
+    <Content Include="js\bootstrap-table-locale-all.min.js" />
+    <Content Include="js\bootstrap-table.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\bootstrap3-typeahead.js" />
+    <Content Include="js\intlTelInput.js" />
+    <Content Include="js\jquery-1.12.0.js" />
+    <Content Include="js\jquery-clockpicker.min.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\moment.min.js" />
+    <Content Include="js\pulsate.min.js" />
+    <Content Include="js\select2.full.min.js" />
+    <Content Include="js\utils.js" />
+    <Content Include="js\validar\bootstrap.js" />
+    <Content Include="js\validar\formValidation.js" />
+    <Content Include="obj\Debug\Empadronamiento.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Empadronamiento.dll" />
+    <Content Include="obj\Debug\Empadronamiento.pdb" />
+    <Content Include="obj\Debug\TempPE\Reportes.certificadoSumar1.cs.dll" />
+    <Content Include="ObraSocial.aspx" />
+    <Content Include="OSoc.aspx" />
+    <Content Include="PacienteCeliaco.aspx" />
+    <Content Include="PacienteDefuncion.aspx" />
+    <Content Include="PacienteEdit.aspx" />
+    <Content Include="PacienteList.aspx" />
+    <Content Include="PacienteReporte.aspx" />
+    <Content Include="PacienteSms.aspx" />
+    <Content Include="PacienteUnificar.aspx" />
+    <Content Include="PacienteUnificarHelp.aspx" />
+    <Content Include="PacienteView.aspx" />
+    <Content Include="Parentesco\ParentescoEdit.aspx" />
+    <Content Include="Parentesco\ParentescoList.aspx" />
+    <Content Include="Probando.aspx" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="UserControls\AlertaCM.ascx" />
+    <Content Include="UserControls\AlertasControlMenor.ascx" />
+    <Content Include="UserControls\CalendarioVacunacion.ascx" />
+    <Content Include="UserControls\ConsultorioPaciente.ascx" />
+    <Content Include="UserControls\Efector.ascx" />
+    <Content Include="UserControls\ObrasSociales.ascx" />
+    <Content Include="UserControls\PacienteProvincial.ascx" />
+    <Content Include="UserControls\Profesional.ascx" />
+    <Content Include="UserControls\ResumenPaciente.ascx" />
+    <Content Include="Validar.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Antecedente\AntecedentesFamiliares.aspx.cs">
+      <DependentUpon>AntecedentesFamiliares.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Antecedente\AntecedentesFamiliares.aspx.designer.cs">
+      <DependentUpon>AntecedentesFamiliares.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaAmbulatoria\UserControls\DiagnosticoPrincipal.ascx.cs">
+      <DependentUpon>DiagnosticoPrincipal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaAmbulatoria\UserControls\DiagnosticoPrincipal.ascx.designer.cs">
+      <DependentUpon>DiagnosticoPrincipal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HistoriaClinica\ConsultasHClinicas.aspx.cs">
+      <DependentUpon>ConsultasHClinicas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HistoriaClinica\ConsultasHClinicas.aspx.designer.cs">
+      <DependentUpon>ConsultasHClinicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HistoriaClinica\NroHistoriaClinicaEdit.aspx.cs">
+      <DependentUpon>NroHistoriaClinicaEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HistoriaClinica\NroHistoriaClinicaEdit.aspx.designer.cs">
+      <DependentUpon>NroHistoriaClinicaEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HistoriaClinica\NroHistoriaClinicaView.aspx.cs">
+      <DependentUpon>NroHistoriaClinicaView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HistoriaClinica\NroHistoriaClinicaView.aspx.designer.cs">
+      <DependentUpon>NroHistoriaClinicaView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HistoriaClinica\NroHistoriaClinicaxEfector.aspx.cs">
+      <DependentUpon>NroHistoriaClinicaxEfector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HistoriaClinica\NroHistoriaClinicaxEfector.aspx.designer.cs">
+      <DependentUpon>NroHistoriaClinicaxEfector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mPaciente.Master.cs">
+      <DependentUpon>mPaciente.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mPaciente.Master.designer.cs">
+      <DependentUpon>mPaciente.Master</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="ObraSocial.aspx.cs">
+      <DependentUpon>ObraSocial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObraSocial.aspx.designer.cs">
+      <DependentUpon>ObraSocial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OSoc.aspx.cs">
+      <DependentUpon>OSoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OSoc.aspx.designer.cs">
+      <DependentUpon>OSoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PacienteCeliaco.aspx.cs">
+      <DependentUpon>PacienteCeliaco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PacienteCeliaco.aspx.designer.cs">
+      <DependentUpon>PacienteCeliaco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PacienteDefuncion.aspx.cs">
+      <DependentUpon>PacienteDefuncion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PacienteDefuncion.aspx.designer.cs">
+      <DependentUpon>PacienteDefuncion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PacienteEdit.aspx.cs">
+      <DependentUpon>PacienteEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PacienteEdit.aspx.designer.cs">
+      <DependentUpon>PacienteEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PacienteList.aspx.cs">
+      <DependentUpon>PacienteList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PacienteList.aspx.designer.cs">
+      <DependentUpon>PacienteList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PacienteReporte.aspx.cs">
+      <DependentUpon>PacienteReporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PacienteReporte.aspx.designer.cs">
+      <DependentUpon>PacienteReporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PacienteSms.aspx.cs">
+      <DependentUpon>PacienteSms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PacienteSms.aspx.designer.cs">
+      <DependentUpon>PacienteSms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PacienteUnificar.aspx.cs">
+      <DependentUpon>PacienteUnificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PacienteUnificar.aspx.designer.cs">
+      <DependentUpon>PacienteUnificar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PacienteUnificarHelp.aspx.cs">
+      <DependentUpon>PacienteUnificarHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PacienteUnificarHelp.aspx.designer.cs">
+      <DependentUpon>PacienteUnificarHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PacienteView.aspx.cs">
+      <DependentUpon>PacienteView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PacienteView.aspx.designer.cs">
+      <DependentUpon>PacienteView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parentesco\ParentescoEdit.aspx.cs">
+      <DependentUpon>ParentescoEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parentesco\ParentescoEdit.aspx.designer.cs">
+      <DependentUpon>ParentescoEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parentesco\ParentescoList.aspx.cs">
+      <DependentUpon>ParentescoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parentesco\ParentescoList.aspx.designer.cs">
+      <DependentUpon>ParentescoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Probando.aspx.cs">
+      <DependentUpon>Probando.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Probando.aspx.designer.cs">
+      <DependentUpon>Probando.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prueba.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prueba.aspx.designer.cs">
+      <DependentUpon>Prueba.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\certificadoSumar1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>certificadoSumar.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ConstanciaSumar.cs" />
+    <Compile Include="UserControls\AlertaCM.ascx.cs">
+      <DependentUpon>AlertaCM.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\AlertaCM.ascx.designer.cs">
+      <DependentUpon>AlertaCM.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AlertasControlMenor.ascx.cs">
+      <DependentUpon>AlertasControlMenor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\AlertasControlMenor.ascx.designer.cs">
+      <DependentUpon>AlertasControlMenor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CalendarioVacunacion.ascx.cs">
+      <DependentUpon>CalendarioVacunacion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CalendarioVacunacion.ascx.designer.cs">
+      <DependentUpon>CalendarioVacunacion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ConsultorioPaciente.ascx.cs">
+      <DependentUpon>ConsultorioPaciente.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ConsultorioPaciente.ascx.designer.cs">
+      <DependentUpon>ConsultorioPaciente.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Efector.ascx.cs">
+      <DependentUpon>Efector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Efector.ascx.designer.cs">
+      <DependentUpon>Efector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ObrasSociales.ascx.cs">
+      <DependentUpon>ObrasSociales.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ObrasSociales.ascx.designer.cs">
+      <DependentUpon>ObrasSociales.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PacienteProvincial.ascx.cs">
+      <DependentUpon>PacienteProvincial.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PacienteProvincial.ascx.designer.cs">
+      <DependentUpon>PacienteProvincial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Profesional.ascx.cs">
+      <DependentUpon>Profesional.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Profesional.ascx.designer.cs">
+      <DependentUpon>Profesional.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ResumenPaciente.ascx.cs">
+      <DependentUpon>ResumenPaciente.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ResumenPaciente.ascx.designer.cs">
+      <DependentUpon>ResumenPaciente.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades\DateDifference.cs" />
+    <Compile Include="Utilidades\DTdiff.cs" />
+    <Compile Include="Utilidades\Utils.cs" />
+    <Compile Include="Validar.aspx.cs">
+      <DependentUpon>Validar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Validar.aspx.designer.cs">
+      <DependentUpon>Validar.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reportes\certificadoSumar.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>certificadoSumar1.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DalPadron\DalPadron.csproj">
+      <Project>{19277492-bc8f-42d9-bb44-5a90b034e473}</Project>
+      <Name>DalPadron</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DalSic\DalSic.csproj">
+      <Project>{e97fb9fb-0bc4-46e6-8f2f-a3c97f9ed9f5}</Project>
+      <Name>DalSic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51887</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51887/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>https://www.desarrollo.saludnqn.gob.ar/empadronamiento</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

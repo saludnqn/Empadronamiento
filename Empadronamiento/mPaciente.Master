@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mPaciente.Master.cs" Inherits="Empadronamiento.mPaciente" %>
+
+<!DOCTYPE html>
+<html lang="es-AR">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Subsecretaría de Salud - Sistema Integral Provincial de Salud</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" id="lnkStyleSheet">
+    <link href="css/fonts/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/jquery-ui.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/formValidation.css" rel="stylesheet" />
+    <link href="css/bootstrap-table.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-datepicker3.min.css" rel="stylesheet" />
+    <link href="css/jquery-clockpicker.min.css" rel="stylesheet" />
+    <link href="css/select2.min.css" rel="stylesheet" />    
+    <link href="css/intlTelInput.css" rel="stylesheet" />    
+
+    <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/validar/formValidation.js"></script>
+    <script src="js/validar/bootstrap.js"></script>
+    <script src="js/bootstrap-table.min.js"></script>
+    <script src="js/bootstrap3-typeahead.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/bootstrap-datepicker.es.min.js"></script>
+    <script src="js/jquery-clockpicker.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/pulsate.min.js"></script>
+
+    <script src="js/intlTelInput.js"></script>
+
+    <script type="text/javascript">
+        document.createElement("nav");
+        document.createElement("header");
+        document.createElement("footer");
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server" class="form-horizontal form1" role="form" >
+        <div id="art-sheet">
+            <header class="art-header clearfix">
+                <div class="art-shapes">
+                    <div class="art-logoDiv">
+                    </div>
+                    <div class="art-systemDiv">
+                        <strong>
+                            <asp:Label ID="lblSistema" runat="server" Text="SISTEMA INTEGRADO PROVINCIAL DE SALUD" />
+                        </strong>
+                        <div id="EfectorDiv">
+                            <asp:Label ID="lblEfector" runat="server" />
+                        </div>
+                    </div>
+                    <div class="art-datousrM">                        
+                        <asp:LinkButton ID="lnkHome" runat="server" OnClick="lnkHome_Click">
+                            <asp:Image ID="Image1" runat="server" ImageUrl="Images/home.png" Style="border-width: 0px;" />
+                        </asp:LinkButton>
+                        <asp:LinkButton ID="lnkChangePass" runat="server" OnClick="lnkChangePass_Click">
+                            <asp:Image ID="Image2" runat="server" ImageUrl="Images/config.png" Style="border-width: 0px;" />
+                        </asp:LinkButton>
+                        <asp:LinkButton ID="lnkExit" runat="server" OnClick="lnkExit_Click">
+                            <asp:Image ID="Image3" runat="server" ImageUrl="Images/shut-down.png" Style="border-width: 0px;" />
+                        </asp:LinkButton>                        
+                        <br />
+                        Usuario:
+                          <asp:Label ID="lblUsr" runat="server" />
+                    </div>
+                </div>
+            </header>
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <asp:ListView runat="server" ID="lvMenuSSO" EnableTheming="True" ItemPlaceholderID="menuItem"
+                            OnItemDataBound="lvMenuSSO_ItemDataBound">
+                            <LayoutTemplate>
+                                <ul class="nav navbar-nav">
+                                    <asp:PlaceHolder ID="menuItem" runat="server" />
+                                </ul>
+                            </LayoutTemplate>
+                            <ItemTemplate>
+                                <li class="dropdown"><a href="#" id="hlMenu" runat="server" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <%# Eval("text") %><span class="caret"></span></a>
+                                    <asp:ListView runat="server" ID="lvSubMenuSSO" EnableTheming="True" ItemPlaceholderID="menuSubItem">
+                                        <LayoutTemplate>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                                                <asp:PlaceHolder ID="menuSubItem" runat="server" />
+                                            </ul>
+                                        </LayoutTemplate>
+                                        <ItemTemplate>
+                                            <li>
+                                                <asp:HyperLink ID="hlMenu2" runat="server" NavigateUrl='<%# "~/" + Page.ResolveUrl(Eval("url").ToString()) %>'> 
+                         <%# Eval("text") %>
+                                                </asp:HyperLink>
+                                            </li>
+                                        </ItemTemplate>
+                                    </asp:ListView>
+                                </li>
+                            </ItemTemplate>
+                        </asp:ListView>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+
+            <asp:ContentPlaceHolder ID="head" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="Superior" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="main">
+            <div id="leftside">
+                <asp:ContentPlaceHolder ID="Cuerpo" runat="server">
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="Botones" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        $('ul.nav li.dropdown').hover(function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+        }, function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+        });
+    </script>
+
+</body>
+</html>
