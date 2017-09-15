@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OSoc.aspx.cs" Inherits="Empadronamiento.OSoc" MasterPageFile="~/login.Master" Theme="Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OSoc.aspx.cs" Inherits="Empadronamiento.OSoc" MasterPageFile="~/login.Master" %>
 
 <%@ Register Src="~/UserControls/ObrasSociales.ascx" TagName="OSociales" TagPrefix="uc1" %>
     

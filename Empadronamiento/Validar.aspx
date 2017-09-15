@@ -23,7 +23,7 @@
     <script type="text/javascript">
         var pepe = $("#<%= txtPrueba1.ClientID%>");
         var capo = "<%= txtPrueba1.ClientID %>";
-        alert(capo);
+
         $(document).ready(function () {
             $('#aspnetForm').formValidation({
                 message: 'This value is not valid',

@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PacienteView.aspx.cs" MasterPageFile="~/mPaciente.Master"
-    Inherits="Empadronamiento.PacienteView" Theme="Login" %>
+    Inherits="Empadronamiento.PacienteView" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

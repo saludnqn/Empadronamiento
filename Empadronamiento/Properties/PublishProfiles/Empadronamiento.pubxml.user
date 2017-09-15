@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\publicaciones\empadronamiento\20170915_3</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Antecedente/AntecedentesFamiliares.aspx">
+      <publishTime>08/31/2017 14:57:26</publishTime>
+    </File>
+    <File Include="ApplicationInsights.config">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="bin/DalPadron.dll">
+      <publishTime>09/11/2017 12:11:10</publishTime>
+    </File>
+    <File Include="bin/DalSic.dll">
+      <publishTime>09/11/2017 12:11:16</publishTime>
+    </File>
+    <File Include="bin/Empadronamiento.dll">
+      <publishTime>09/15/2017 11:31:26</publishTime>
+    </File>
+    <File Include="bin/Empadronamiento.dll.config">
+      <publishTime>09/11/2017 10:08:02</publishTime>
+    </File>
+    <File Include="bin/ExtensionMethods.dll">
+      <publishTime>08/31/2017 14:57:28</publishTime>
+    </File>
+    <File Include="bin/MagicAjax.dll">
+      <publishTime>08/31/2017 14:57:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>08/31/2017 14:57:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>08/31/2017 14:57:29</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>08/31/2017 14:57:29</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>08/31/2017 14:57:29</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>08/31/2017 14:57:29</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>08/31/2017 14:57:29</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>08/31/2017 14:57:29</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>08/31/2017 14:57:29</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/31/2017 14:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>08/31/2017 14:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>08/31/2017 14:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>08/31/2017 14:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>08/31/2017 14:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>08/31/2017 14:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>08/31/2017 14:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>08/31/2017 14:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>08/31/2017 14:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>08/31/2017 14:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>08/31/2017 14:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>08/31/2017 14:57:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>08/31/2017 14:57:35</publishTime>
+    </File>
+    <File Include="bin/Salud.Security.SSO.Core.dll">
+      <publishTime>08/31/2017 14:57:36</publishTime>
+    </File>
+    <File Include="bin/Salud.Security.SSO.dll">
+      <publishTime>08/31/2017 14:57:36</publishTime>
+    </File>
+    <File Include="bin/SubSonic.dll">
+      <publishTime>08/31/2017 14:57:23</publishTime>
+    </File>
+    <File Include="ConsultaAmbulatoria/UserControls/DiagnosticoPrincipal.ascx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="css/bootstrap-datepicker.min.css">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/bootstrap-datepicker3.min.css">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/bootstrap-datetimepicker.min.css">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/bootstrap-table.min.css">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/fonts/font-awesome.min.css">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/fonts/fontawesome-webfont.eot">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/fonts/fontawesome-webfont.svg">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/fonts/fontawesome-webfont.ttf">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/fonts/fontawesome-webfont.woff">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/fonts/fontawesome-webfont.woff2">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/fonts/FontAwesome.otf">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/formValidation.css">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/intlTelInput.css">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/jquery-clockpicker.min.css">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/jquery-ui.css">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="css/select2.min.css">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>09/15/2017 11:27:18</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>08/31/2017 14:57:31</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="HelpUnificacion.htm">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="HistoriaClinica/ConsultasHClinicas.aspx">
+      <publishTime>09/15/2017 11:29:27</publishTime>
+    </File>
+    <File Include="HistoriaClinica/NroHistoriaClinicaEdit.aspx">
+      <publishTime>09/15/2017 11:29:36</publishTime>
+    </File>
+    <File Include="HistoriaClinica/NroHistoriaClinicaView.aspx">
+      <publishTime>09/15/2017 11:29:54</publishTime>
+    </File>
+    <File Include="HistoriaClinica/NroHistoriaClinicaxEfector.aspx">
+      <publishTime>09/15/2017 11:30:04</publishTime>
+    </File>
+    <File Include="img/flags%402x.png">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="img/flags.png">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/bootstrap-datepicker.es.min.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/bootstrap-datepicker.min.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/bootstrap-datetimepicker.min.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/bootstrap-table-locale-all.min.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/bootstrap-table.min.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/bootstrap.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/bootstrap3-typeahead.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/intlTelInput.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/jquery-1.12.0.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/jquery-clockpicker.min.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/jquery-ui.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/moment.min.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/pulsate.min.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/select2.full.min.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/utils.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/validar/bootstrap.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="js/validar/formValidation.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="mPaciente.Master">
+      <publishTime>09/15/2017 09:26:32</publishTime>
+    </File>
+    <File Include="ObraSocial.aspx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="OSoc.aspx">
+      <publishTime>09/15/2017 11:30:12</publishTime>
+    </File>
+    <File Include="PacienteCeliaco.aspx">
+      <publishTime>09/15/2017 11:31:07</publishTime>
+    </File>
+    <File Include="PacienteDefuncion.aspx">
+      <publishTime>09/15/2017 11:31:09</publishTime>
+    </File>
+    <File Include="PacienteEdit.aspx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="PacienteList.aspx">
+      <publishTime>09/11/2017 10:13:25</publishTime>
+    </File>
+    <File Include="PacienteReporte.aspx">
+      <publishTime>09/15/2017 11:20:54</publishTime>
+    </File>
+    <File Include="PacienteSms.aspx">
+      <publishTime>09/15/2017 11:31:03</publishTime>
+    </File>
+    <File Include="PacienteUnificar.aspx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="PacienteUnificarHelp.aspx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="PacienteView.aspx">
+      <publishTime>09/15/2017 11:31:03</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="Parentesco/ParentescoEdit.aspx">
+      <publishTime>09/15/2017 11:31:03</publishTime>
+    </File>
+    <File Include="Parentesco/ParentescoList.aspx">
+      <publishTime>09/15/2017 11:31:03</publishTime>
+    </File>
+    <File Include="Probando.aspx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="scripts/ai.0.22.9-build00167.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="scripts/ai.0.22.9-build00167.min.js">
+      <publishTime>08/31/2017 14:57:32</publishTime>
+    </File>
+    <File Include="UserControls/AlertaCM.ascx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="UserControls/AlertasControlMenor.ascx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="UserControls/CalendarioVacunacion.ascx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="UserControls/ConsultorioPaciente.ascx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="UserControls/Efector.ascx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="UserControls/ObrasSociales.ascx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="UserControls/PacienteProvincial.ascx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="UserControls/Profesional.ascx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="UserControls/ResumenPaciente.ascx">
+      <publishTime>08/31/2017 14:57:27</publishTime>
+    </File>
+    <File Include="Validar.aspx">
+      <publishTime>09/01/2017 11:07:42</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/11/2017 10:08:02</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

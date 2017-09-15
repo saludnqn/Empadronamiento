@@ -1,7 +1,6 @@
 C:\Proyectos\Empadronamiento\DalSic\bin\Debug\DalSic.dll.config
 C:\Proyectos\Empadronamiento\DalSic\bin\Debug\DalSic.dll
 C:\Proyectos\Empadronamiento\DalSic\bin\Debug\DalSic.pdb
-C:\Proyectos\Empadronamiento\DalSic\bin\Debug\SubSonic.dll
 C:\Proyectos\Empadronamiento\DalSic\obj\Debug\DalSic.dll
 C:\Proyectos\Empadronamiento\DalSic\obj\Debug\DalSic.pdb
 C:\Proyectos\Empadronamiento\DalSic\obj\Debug\DalSic.csprojResolveAssemblyReference.cache

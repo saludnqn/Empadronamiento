@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="mConfiguracion.Master" Theme="Login" AutoEventWireup="true"
+﻿<%@ Page Title="" Language="C#" MasterPageFile="mConfiguracion.Master" AutoEventWireup="true"
     CodeBehind="PacienteSms.aspx.cs" Inherits="Empadronamiento.PacienteSms" %>
 
 <asp:Content ID="content1" ContentPlaceHolderID="head" runat="server">

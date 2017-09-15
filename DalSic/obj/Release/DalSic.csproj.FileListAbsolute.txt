@@ -1,0 +1,6 @@
+C:\Proyectos\Empadronamiento\DalSic\bin\Release\DalSic.dll.config
+C:\Proyectos\Empadronamiento\DalSic\bin\Release\DalSic.dll
+C:\Proyectos\Empadronamiento\DalSic\bin\Release\DalSic.pdb
+C:\Proyectos\Empadronamiento\DalSic\obj\Release\DalSic.csprojResolveAssemblyReference.cache
+C:\Proyectos\Empadronamiento\DalSic\obj\Release\DalSic.dll
+C:\Proyectos\Empadronamiento\DalSic\obj\Release\DalSic.pdb

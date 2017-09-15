@@ -1,0 +1,6 @@
+C:\Proyectos\Empadronamiento\DalPadron\bin\Release\DalPadron.dll.config
+C:\Proyectos\Empadronamiento\DalPadron\bin\Release\DalPadron.dll
+C:\Proyectos\Empadronamiento\DalPadron\bin\Release\DalPadron.pdb
+C:\Proyectos\Empadronamiento\DalPadron\obj\Release\DalPadron.csprojResolveAssemblyReference.cache
+C:\Proyectos\Empadronamiento\DalPadron\obj\Release\DalPadron.dll
+C:\Proyectos\Empadronamiento\DalPadron\obj\Release\DalPadron.pdb

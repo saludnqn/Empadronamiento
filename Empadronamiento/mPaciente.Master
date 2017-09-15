@@ -20,21 +20,6 @@
     <link href="css/select2.min.css" rel="stylesheet" />    
     <link href="css/intlTelInput.css" rel="stylesheet" />    
 
-    <script src="js/jquery-1.12.0.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/validar/formValidation.js"></script>
-    <script src="js/validar/bootstrap.js"></script>
-    <script src="js/bootstrap-table.min.js"></script>
-    <script src="js/bootstrap3-typeahead.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/bootstrap-datepicker.es.min.js"></script>
-    <script src="js/jquery-clockpicker.min.js"></script>
-    <script src="js/select2.full.min.js"></script>
-    <script src="js/pulsate.min.js"></script>
-
-    <script src="js/intlTelInput.js"></script>
-
     <script type="text/javascript">
         document.createElement("nav");
         document.createElement("header");
@@ -42,6 +27,20 @@
     </script>
 </head>
 <body>
+    <script src="<%= Page.ResolveUrl("~/js/jquery-1.12.0.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/js/jquery-ui.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/js/bootstrap.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/js/validar/formValidation.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/js/validar/bootstrap.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/js/bootstrap-table.min.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/js/bootstrap3-typeahead.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/js/bootstrap-datepicker.min.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/js/bootstrap-datepicker.es.min.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/js/jquery-clockpicker.min.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/js/select2.full.min.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/js/pulsate.min.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/js/intlTelInput.js") %>"></script>
+
     <form id="form1" runat="server" class="form-horizontal form1" role="form" >
         <div id="art-sheet">
             <header class="art-header clearfix">

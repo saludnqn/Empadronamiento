@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Tunro.Master" Title="Parentescos" CodeBehind="ParentescoList.aspx.cs" Inherits="DalSic.Parentesco.ParentescoList" Theme="Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Tunro.Master" Title="Parentescos" CodeBehind="ParentescoList.aspx.cs" Inherits="DalSic.Parentesco.ParentescoList" %>
 
 <%@ Register Assembly="Subsonic" Namespace="SubSonic" TagPrefix="subsonic" %>
 

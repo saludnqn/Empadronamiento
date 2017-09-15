@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NroHistoriaClinicaEdit.aspx.cs" Inherits="DalSic.HistoriaClinica.NroHistoriaClinicaEdit" MasterPageFile="~/mPaciente.Master" Theme="Login" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NroHistoriaClinicaEdit.aspx.cs" Inherits="DalSic.HistoriaClinica.NroHistoriaClinicaEdit" MasterPageFile="~/mPaciente.Master" %>
 
 <asp:Content ID="content0" ContentPlaceHolderID="head" runat="server">
      <script src="../js/jquery-1.12.0.js"></script>

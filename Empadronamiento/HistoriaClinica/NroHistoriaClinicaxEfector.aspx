@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NroHistoriaClinicaxEfector.aspx.cs" MasterPageFile="~/mPaciente.Master" Theme="Login" Inherits="DalSic.HistoriaClinica.NroHistoriaClinicaxEfector" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NroHistoriaClinicaxEfector.aspx.cs" MasterPageFile="~/mPaciente.Master" Inherits="DalSic.HistoriaClinica.NroHistoriaClinicaxEfector" %>
 
 <%@ Register Assembly="MagicAjax" Namespace="MagicAjax.UI.Controls" TagPrefix="ajax" %>
 <asp:Content ID="content0" ContentPlaceHolderID="head" runat="server">

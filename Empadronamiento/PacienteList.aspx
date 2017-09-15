@@ -63,7 +63,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-offset-1 col-xs-6 col-md-5 ">
-                                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-lg btn-block" OnClick="btnBuscar_Click"/>
+                                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary btn-lg btn-block" OnClick="btnBuscar_Click" />
                                 </div>
                                 <div class="col-md-offset-1 col-xs-6 col-md-5">
                                     <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" OnClick="btnNuevo_Click"
@@ -199,7 +199,7 @@
                                     message: 'El número de documento no debe ser vacío, salvo que busque por apellido y nombre'
                                 },
                                 regexp: {
-                                    regexp: /^[0-9]\d{6}|\d{7}/,  
+                                    regexp: /^[0-9]\d{6}|\d{7}/,
                                     message: 'El documento ingresado no es válido '
                                 }
                             }
@@ -216,7 +216,7 @@
                                     max: 60,
                                     message: 'El apellido ingresado no es un apellido válido'
                                 },
-                                
+
                             }
                         },
                         '<%= txtDniMadre.UniqueID %>': {
@@ -253,26 +253,26 @@
                         dniMama = $('#aspnetForm').find('[name="<%= txtDniMadre.UniqueID %>"]').val(),
                         apellidoMadreTutor = $('#aspnetForm').find('[name="<%= txtApellidoMadre.UniqueID %>"]').val(),
                         fv = $('#aspnetForm').data('formValidation');
-                    
+
                     switch ($(this).attr('name')) {
                         // User is focusing the ssn field
                         case '<%= txtDni.UniqueID %>':
 
                             fv.enableFieldValidators('<%= txtApellido.UniqueID %>', dni === '').revalidateField('<%= txtApellido.UniqueID %>');
-                            
+
                             if (dni && fv.getOptions('<%= txtDni.UniqueID %>', null, 'enabled') === false) {
                                 fv.enableFieldValidators('<%= txtDni.UniqueID %>', true).revalidateField('<%= txtDni.UniqueID %>');
                             } else if (dni === '' && apellido !== '') {
                                 fv.enableFieldValidators('<%= txtDni.UniqueID %>', false).revalidateField('<%= txtDni.UniqueID %>');
-                            } 
-                            
+                            }
+
                             //Deshabilito busqueda por tutor
-                             fv.enableFieldValidators('<%= txtApellidoMadre.UniqueID %>', false).revalidateField('<%= txtApellidoMadre.UniqueID %>');
-                             fv.enableFieldValidators('<%= txtDniMadre.UniqueID %>', false).revalidateField('<%= txtDniMadre.UniqueID %>');
-                        break;
+                        fv.enableFieldValidators('<%= txtApellidoMadre.UniqueID %>', false).revalidateField('<%= txtApellidoMadre.UniqueID %>');
+                            fv.enableFieldValidators('<%= txtDniMadre.UniqueID %>', false).revalidateField('<%= txtDniMadre.UniqueID %>');
+                            break;
 
                             // El usuario esta haciendo foco en apellido
-                    case '<%= txtApellido.UniqueID %>':
+                        case '<%= txtApellido.UniqueID %>':
 
                             if (apellido === '') {
                                 fv.enableFieldValidators('<%= txtDni.UniqueID %>', true).revalidateField('<%= txtDni.UniqueID %>');
@@ -280,62 +280,59 @@
                                 fv.enableFieldValidators('<%= txtDni.UniqueID %>', false).revalidateField('<%= txtDni.UniqueID %>');
                             }
                         //Deshabilito busqueda por tutor
-                             fv.enableFieldValidators('<%= txtApellidoMadre.UniqueID %>', false).revalidateField('<%= txtApellidoMadre.UniqueID %>');
-                             fv.enableFieldValidators('<%= txtDniMadre.UniqueID %>', false).revalidateField('<%= txtDniMadre.UniqueID %>');
+                        fv.enableFieldValidators('<%= txtApellidoMadre.UniqueID %>', false).revalidateField('<%= txtApellidoMadre.UniqueID %>');
+                        fv.enableFieldValidators('<%= txtDniMadre.UniqueID %>', false).revalidateField('<%= txtDniMadre.UniqueID %>');
 
                         if (apellido && dni === '' && fv.getOptions('<%= txtApellido.UniqueID %>', null, 'enabled') === false) {
                             fv.enableFieldValidators('<%= txtApellido.UniqueID %>', true).revalidateField('<%= txtApellido.UniqueID %>');
                         }
                         break;
 
-                        case '<%=txtFecNacBusqueda.UniqueID %>':
-                            if (apellido !== '')
-                            {
+                    case '<%=txtFecNacBusqueda.UniqueID %>':
+                            if (apellido !== '') {
                                 fv.enableFieldValidators('<%= txtApellido.UniqueID %>', true).revalidateField('<%= txtApellido.UniqueID %>');
                                 fv.enableFieldValidators('<%= txtDni.UniqueID %>', false).revalidateField('<%= txtDni.UniqueID %>');
                                 fv.enableFieldValidators('<%= txtApellidoMadre.UniqueID %>', false).revalidateField('<%= txtApellidoMadre.UniqueID %>');
                             }
                             break;
 
-                    case '<%= txtDniMadre.UniqueID %>':
+                        case '<%= txtDniMadre.UniqueID %>':
 
                             if (dniMama !== '') {
                                 fv.enableFieldValidators('<%= txtDniMadre.UniqueID %>', true).revalidateField('<%= txtDniMadre.UniqueID %>');
                                 fv.enableFieldValidators('<%= txtDni.UniqueID %>', false).revalidateField('<%= txtDni.UniqueID %>');
                                 fv.enableFieldValidators('<%= txtApellido.UniqueID %>', false).revalidateField('<%= txtDni.UniqueID %>');
                             }
-                        fv.enableFieldValidators('<%= txtApellidoMadre.UniqueID %>', false).revalidateField('<%= txtApellidoMadre.UniqueID %>');
+                            fv.enableFieldValidators('<%= txtApellidoMadre.UniqueID %>', false).revalidateField('<%= txtApellidoMadre.UniqueID %>');
                         break;
 
-                        case '<%= txtApellidoMadre.UniqueID %>':
-                      
-                        if (apellidoMadreTutor !== '') {
-                            fv.enableFieldValidators('<%= txtApellidoMadre.UniqueID %>', true).revalidateField('<%= txtApellidoMadre.UniqueID %>');
+                    case '<%= txtApellidoMadre.UniqueID %>':
+
+                            if (apellidoMadreTutor !== '') {
+                                fv.enableFieldValidators('<%= txtApellidoMadre.UniqueID %>', true).revalidateField('<%= txtApellidoMadre.UniqueID %>');
                             fv.enableFieldValidators('<%= txtDniMadre.UniqueID %>', false).revalidateField('<%= txtDniMadre.UniqueID %>');
                             fv.enableFieldValidators('<%= txtDni.UniqueID %>', false).revalidateField('<%= txtDni.UniqueID %>');
                             fv.enableFieldValidators('<%= txtApellido.UniqueID %>', false).revalidateField('<%= txtDni.UniqueID %>');
-                        } else if (apellidoMadreTutor === '')
-                        {
+                        } else if (apellidoMadreTutor === '') {
                             fv.enableFieldValidators('<%= txtApellidoMadre.UniqueID %>', false).revalidateField('<%= txtApellidoMadre.UniqueID %>');
 
                             if (dni !== '') { fv.enableFieldValidators('<%= txtDni.UniqueID %>', true).revalidateField('<%= txtDni.UniqueID %>'); }
                             if (apellido !== '') { fv.enableFieldValidators('<%= txtApellido.UniqueID %>', true).revalidateField('<%= txtApellido.UniqueID %>'); }
                             if (dniMama !== '') { fv.enableFieldValidators('<%= txtDniMadre.UniqueID %>', true).revalidateField('<%= txtDniMadre.UniqueID %>'); }
 
-                            if (dni ==='' && apellido==='' && dniMama === '')
-                            {
-                            fv.enableFieldValidators('<%= txtDniMadre.UniqueID %>', true).revalidateField('<%= txtDniMadre.UniqueID %>');
-                            fv.enableFieldValidators('<%= txtDni.UniqueID %>', true).revalidateField('<%= txtDni.UniqueID %>');
-                            fv.enableFieldValidators('<%= txtApellido.UniqueID %>', true).revalidateField('<%= txtApellido.UniqueID %>');
+                            if (dni === '' && apellido === '' && dniMama === '') {
+                                fv.enableFieldValidators('<%= txtDniMadre.UniqueID %>', true).revalidateField('<%= txtDniMadre.UniqueID %>');
+                                fv.enableFieldValidators('<%= txtDni.UniqueID %>', true).revalidateField('<%= txtDni.UniqueID %>');
+                                fv.enableFieldValidators('<%= txtApellido.UniqueID %>', true).revalidateField('<%= txtApellido.UniqueID %>');
                             }
 
                         };
-                        
-                            break;
 
-                        default:
-                            break;
-                    }
+                    break;
+
+                default:
+                    break;
+            }
                 });
         });
 

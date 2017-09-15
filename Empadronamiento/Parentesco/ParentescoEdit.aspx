@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="mConfiguracion.Master" CodeBehind="ParentescoEdit.aspx.cs" Inherits="DalSic.Parentesco.ParentescoEdit" Theme="Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="mConfiguracion.Master" CodeBehind="ParentescoEdit.aspx.cs" Inherits="DalSic.Parentesco.ParentescoEdit" %>
 
 <%@ Register Assembly="Subsonic" Namespace="SubSonic" TagPrefix="subsonic" %>
 

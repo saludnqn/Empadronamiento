@@ -148,6 +148,7 @@
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\Empadronamiento.csprojResolveAssemblyReference.cache" />
     <Content Include="mPaciente.Master" />
+    <None Include="Properties\PublishProfiles\Empadronamiento.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
